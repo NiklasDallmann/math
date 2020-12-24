@@ -10,6 +10,7 @@
 #include <iomanip>
 #include <limits>
 #include <ostream>
+#include <string>
 #include <type_traits>
 
 #include "common.hpp"

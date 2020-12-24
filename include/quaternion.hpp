@@ -4,6 +4,7 @@
 #include <cassert>
 #include <cmath>
 #include <cstddef>
+#include <string>
 
 #include "units/angle.hpp"
 #include "matrix.hpp"

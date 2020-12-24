@@ -6,6 +6,7 @@
 #include "common.hpp"
 #include "number.hpp"
 #include "ratio.hpp"
+#include <string>
 #include "traits.hpp"
 
 namespace nd::math::units

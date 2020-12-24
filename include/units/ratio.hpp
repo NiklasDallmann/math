@@ -6,6 +6,7 @@
 #include <numeric>
 #include <ostream>
 #include <ratio>
+#include <string>
 
 #include <common.hpp>
 
