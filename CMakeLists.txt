@@ -10,7 +10,7 @@ set(CMAKE_CXX_STANDARD				20)
 set(CMAKE_CXX_STANDARD_REQUIRED		ON)
 
 if(UNIX)
-	set(CMAKE_CXX_FLAGS_DEBUG			"-fsanitize=undefined -fsanitize=address -fno-omit-frame-pointer pedantic-errors -Wpedantic -Werror -Wall -Wextra")
+	set(CMAKE_CXX_FLAGS_DEBUG			"-fsanitize=undefined -fsanitize=address -fno-omit-frame-pointer -pedantic-errors -Wpedantic -Werror -Wall -Wextra")
 	set(CMAKE_CXX_FLAGS_RELEASE			"-march=native -mtune=native -O3 -Wall -Wextra")
 	set(CMAKE_CXX_FLAGS_RELWITHDEBINFO	"${CMAKE_CXX_FLAGS_RELEASE} -g")
 elseif(MSVC)
