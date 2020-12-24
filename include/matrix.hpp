@@ -192,13 +192,11 @@ public:
 
 	constexpr auto operator[](const std::size_t index) -> decltype (detail::subscript<ValueType, Rows, Columns>(nullptr, {}))
 	{
-		assert(index < Rows);
 		return detail::subscript<ValueType, Rows, Columns>(this->_data, index);
 	}
 
 	constexpr auto operator[](const std::size_t index) const -> std::add_const_t<decltype (detail::subscript<ValueType, Rows, Columns>(nullptr, {}))>
 	{
-		assert(index < Rows);
 		return detail::subscript<ValueType, Rows, Columns>(this->_data, index);
 	}
 
