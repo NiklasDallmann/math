@@ -26,8 +26,12 @@ int main(int, char **)
 		a = quantity_cast<Millimeter<double>>(2.0_m);
 		std::cout << quantity_cast<Millimeter<double>>(2.0_m) << "\n";
 		std::cout << a << "\n";
-		cxxdebug << (typename decltype (2.0_mm)::length_dimension_type){};
-		cxxdebug << (typename decltype (quantity_cast<Millimeter<double>>(2.0_m))::length_dimension_type){};
+
+		using Type0 = typename decltype (2.0_mm)::length_dimension_type;
+		using Type1 = typename decltype (quantity_cast<Millimeter<double>>(2.0_m))::length_dimension_type;
+
+		cxxdebug << Type0{};
+		cxxdebug << Type1{};
 		cxxinfo << "pow";
 		cxxdebug << RatioPow<Ratio<1, 1000>, -3>{};
 		cxxdebug << RatioPow<Ratio<1000, 1>, -3>{};

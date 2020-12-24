@@ -108,6 +108,9 @@ struct IsPod : std::disjunction<std::is_trivial<ValueType>, std::is_standard_lay
 template <typename ValueType>
 using EnablePod = std::enable_if_t<IsPod<ValueType>::value, ValueType>;
 
+template <std::size_t Rows, std::size_t Columns, typename Unused_>
+using EnableNonZeroSizeVector = std::enable_if_t<((Rows * Columns) > 0u), Unused_>;
+
 }
 
 #endif // ND_MATH_TRAITS_HPP

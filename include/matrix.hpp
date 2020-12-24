@@ -86,14 +86,18 @@ public:
 		common::copy(this->_data, values.data(), Rows * Columns);
 	}
 
-	template <typename Unused_ = void, typename = traits::EnableVector<Rows, Columns, Unused_>>
+	template <typename Unused_ = void,
+			  typename = traits::EnableVector<Rows, Columns, Unused_>,
+			  typename = traits::EnableNonZeroSizeVector<1u, Columns - 1u, Unused_>>
 	constexpr Matrix(const ValueType scalar, const Matrix<ValueType, 1u, Columns - 1u> &vector)
 	{
 		this->_data[0u] = scalar;
 		common::copy(&this->_data[1u], vector.data(), Columns - 1u);
 	}
 
-	template <typename Unused_ = void, typename = traits::EnableVector<Rows, Columns, Unused_>>
+	template <typename Unused_ = void,
+			  typename = traits::EnableVector<Rows, Columns, Unused_>,
+			  typename = traits::EnableNonZeroSizeVector<Rows - 1u, 1u, Unused_>>
 	constexpr Matrix(const ValueType scalar, const Matrix<ValueType, Rows - 1u, 1u> &vector)
 	{
 		this->_data[0u] = scalar;
