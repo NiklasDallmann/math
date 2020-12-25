@@ -7,7 +7,7 @@
 #include <cstring>
 #include <limits>
 
-#include <traits.hpp>
+#include "traits.hpp"
 
 #define ND_ALWAYS_INLINE __attribute__ ((always_inline))
 
