@@ -72,6 +72,6 @@ Thumbs.db
 *.dll
 *.exe
 
-# VS COde generated files & directories
+# VS Code generated files & directories
 build
 **/.vscode
